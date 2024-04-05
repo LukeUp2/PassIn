@@ -15,7 +15,7 @@ namespace PassIn.Application.UseCases.Events.GetById
 
             //As messagens de erro deveriam ser Localizadas (idioma)
             if (entity is null)
-                throw new PassInException("An event with this id doesn't exist");
+                throw new NotFoundException("An event with this id doesn't exist");
 
             return new ResponseEventJson
             {
